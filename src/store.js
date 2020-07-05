@@ -10,9 +10,12 @@ const store = createStore(
       jobs: jobsReducer,
       errors: errorsReducer
    }),
-composeEnhancers(applyMiddleware(thunk))
+   composeEnhancers(applyMiddleware(thunk))
 );
 
 console.log(store.getState());
 
 export default store;
+
+// in this file, we are creating redux store that uses combineReducers and added thunk from redux-thunk as a middleware for managing
+// the Asynchronous API handling.  We also added the redux devtool configuration using composeEnhancers.
